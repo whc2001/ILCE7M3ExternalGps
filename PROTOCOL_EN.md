@@ -2,9 +2,19 @@
 
 Location Service UUID: 8000DD00-DD00-FFFF-FFFF-FFFFFFFFFFFF
 
-Write Characteristic UUID: 0xDD11
+  - Write Characteristic UUID: 0xDD11
+  - Read Characteristic UUID: 0xDD21
+  
+## BLE Read Configuration Packet Example
+    06 10 00 9C 02 00
 
-## BLE Location Packet Example
+|Offset|Content|Remark|
+|-|-|-|
+|[0:3]|Unknown||
+|[4]|Some sort of flag [**If bit 2 is 1 then timezone and DST offset must be provided when writting coordinate data**]|0x02 & 0x02 = 1, Timezone and DST offset data are required|
+|[5]|Unknown||
+
+## BLE Write Coordinate Packet Example
 
     005d 0802fc030000101010 0bf79e5e 41c385a7 07e40b0504022a 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 01e0 0000
 
@@ -27,4 +37,4 @@ Write Characteristic UUID: 0xDD11
 |*[91:92]|Difference between UTC and current timezone in minutes| 0x01E0 = 480min = 8h (UTC+8)|
 |*[93:94]|Difference for DST in current timezone in minutes|0 (DST is not available in China)|
 
-(Fields marked by \* is optional, may be absent if timezone is not set or something...)
+(Fields marked by \* is required only when bit 2 of byte 4 of configuration data read is 1.)
