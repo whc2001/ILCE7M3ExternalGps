@@ -12,7 +12,7 @@ Status data is grouped in zero or more 3-byte groups, where the first byte is th
 |-|-|-|
 |[0:1]|Manufacturer ID|`0x012D` = Sony|
 |[2:3]|Device Type ID|`0x0003` = Camera|
-|[4:5]|Version|Unknown for now|
+|[4:5]|BLE Protocol Version||
 |[6:7]|Model Code|ASCII (UTF-8) encoded "E1"|
 |[8:10]|Status Data Type `0x22`|Supports Pairing (b7=1), Paired (b6=1), Supports Location Sync (b5=1), Location Sync Disabled (b4=0)|
 |[11:13]|Status Data Type `0x21`|Remote Power On Disabled (b7=0), Camera Currently Powered On (b6=1), Does Not Support WifiHandover (b5=0 b4=0)|
