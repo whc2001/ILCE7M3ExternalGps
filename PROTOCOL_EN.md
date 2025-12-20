@@ -39,9 +39,9 @@ Send `0x06 0x08 0x01 0x00 0x00 0x00 0x00` to initiate pairing (must be sent in p
 
 Location Service UUID: `8000DD00-DD00-FFFF-FFFF-FFFFFFFFFFFF`
 
-  - Notify Characteristic UUID: `0xDD01`
-  - Write Characteristic UUID: `0xDD11`
-  - Read Characteristic UUID: `0xDD21`
+  - Notify Status Characteristic UUID: `0xDD01`
+  - Write Location Data Characteristic UUID: `0xDD11`
+  - Read Configuration Characteristic UUID: `0xDD21`
   - \* Write Characteristic for Lock Location Endpoint UUID: `0xDD30`
   - \* Write Characteristic for Enable Location Update UUID: `0xDD31`
 
