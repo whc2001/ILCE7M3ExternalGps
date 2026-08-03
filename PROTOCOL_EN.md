@@ -21,7 +21,7 @@ Status data is grouped in zero or more 3-byte groups, where the first byte is th
 ## 1.1 Status Data Type List
 |Type|Content|
 |-|-|
-|`0x21`|**b7** Remote Power On Enabled<br>**b6** Camera Powered On<br>**b5** Supports WifiHandover<br>**b4** WifiHandover Enabled<br>**b3 ~ b0** Unknown |
+|`0x21`|**b7** Remote Power On Enabled<br>**b6** 1: Camera Powered On, 0: Camera in networked standby mode<br>**b5** Supports WifiHandover<br>**b4** WifiHandover Enabled<br>**b3 ~ b0** Unknown |
 |`0x22`|**b7** Supports Pairing<br>**b6** Paired<br>**b5** Supports Location Sync<br>**b4** Location Sync Enabled<br>**b3 ~ b0** Unknown |
 |`0x23`|**b7** Supports Mobile Remote Control<br>**b6 ~ b5** Mobile Remote Control Enabled (b6=0 b5=1 means enabled)<br>**b4** Supports Mobile Image Transfer<br>**b3 ~ b2** Mobile Image Transfer Enabled (b3=0 b2=1 means enabled)<br>**b1** Supports Push Notifications<br>**b0** Push Notifications Enabled |
 
